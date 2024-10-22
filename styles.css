@@ -41,7 +41,44 @@
     background-color: white;
     box-shadow: 2px 2px 10px 5px grey;
     z-index: 2;
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 10px;
+    padding: 5px;
 }
+
+.header-cell {
+    display: grid;
+}
+
+.header-right.header-bottom {
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.header-button {
+    font: inherit;
+    border: transparent;
+    background-color: steelblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px black;
+    transition: all 0.2s;
+}
+
+.header-button:hover {
+    border: 3px solid black;
+    transition: all 0.1s;
+}
+
+.header-button:active {
+    scale: 0.98;
+    transition: all 0.2s;
+}
+
 .content-container {
     background-color: whitesmoke;
 }
