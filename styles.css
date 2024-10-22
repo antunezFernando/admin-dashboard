@@ -3,3 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.main-grid-container {
+    height: 100vh;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar-container {
+    background-color: rgb(74, 101, 221);
+    grid-row: 1 / -1;
+    z-index: 3;
+}
+
+.header-container {
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px grey;
+    z-index: 2;
+}
+.content-container {
+    background-color: whitesmoke;
+}
