@@ -1,5 +1,6 @@
 :root {
     --test-border: 5px solid black;
+    --sidebar-hover-color: blue;
     --icon-hover-color: rgb(197, 197, 197);
 }
 
@@ -18,7 +19,7 @@
 }
 
 .sidebar-container {
-    background-color: rgb(74, 101, 221);
+    background-color: steelblue;
     grid-row: 1 / -1;
     z-index: 3;
     color: white;
@@ -31,6 +32,7 @@
     display: grid;
     grid-template-rows: 1fr 6fr 3fr;
     align-items: center;
+    gap: 50px;
 }
 
 .sidebar-row {
@@ -40,6 +42,39 @@
 
 .sidebar-logo-row {
     font-size: 1.2em;
+    gap: 20px;
+
+    & img {
+        scale: 1.5;
+    }
+}
+
+.sidebar-logo-row,
+.sidebar-content-row {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-content-row {
+    padding: 5px;
+    gap: 15px;
+    transition: all linear 50ms;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.sidebar-content-row:hover {
+    box-shadow: 1px 1px 10px  darkblue;
+    background-color: cornflowerblue;
+    scale: 1.03;
+    transition: all linear 50ms;
+}
+
+.sidebar-icon {
+    padding: 3px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 
 .header-container {
